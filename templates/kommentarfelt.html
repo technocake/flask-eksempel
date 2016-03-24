@@ -1,0 +1,13 @@
+<style type="text/css">
+	label { 
+		display: block; /* -- får hver label til å være på ny "linje" -- */
+		width: 200px;
+	}
+</style>
+
+<!-- url_for er en flask funksjon som finner urlen som hører til vår python funksjon  -->
+<form action="{{ url_for('new_comment') }}" method="POST">
+    <label>Name: <input type="text" name="name" value=""></label>
+    <label>Comment: <textarea name="comment" ></textarea></label>
+    <input type="submit" value="Send kommentar" />
+</form>
